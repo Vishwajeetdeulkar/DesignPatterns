@@ -1,0 +1,13 @@
+package com.vishwa.AbstractFactoryDesignPattern.UI;
+
+public class GUIAbstractFactory {
+    public static IFactory createFactory(String osType) {
+        if (osType.equals("windows")) {
+            return new WinFactory();
+        } else if (osType.equals("mac")) {
+            return new MacFactory();
+        }
+
+        return null;
+    }
+}
